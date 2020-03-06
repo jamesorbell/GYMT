@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033439232406DE1600EFD9E3 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439222406DE1600EFD9E3 /* GroupsView.swift */; };
+		033439252406DE2200EFD9E3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439242406DE2200EFD9E3 /* CalendarView.swift */; };
+		033439272406DE2B00EFD9E3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439262406DE2B00EFD9E3 /* SettingsView.swift */; };
+		033439292406E35800EFD9E3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439282406E35800EFD9E3 /* HomeView.swift */; };
 		03B1FDA524054A1B00EE4F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDA424054A1B00EE4F01 /* AppDelegate.swift */; };
 		03B1FDA724054A1B00EE4F01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDA624054A1B00EE4F01 /* SceneDelegate.swift */; };
 		03B1FDA924054A1B00EE4F01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDA824054A1B00EE4F01 /* ContentView.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		033439222406DE1600EFD9E3 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		033439242406DE2200EFD9E3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		033439262406DE2B00EFD9E3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		033439282406E35800EFD9E3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		03B1FDA124054A1B00EE4F01 /* GYMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B1FDA424054A1B00EE4F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B1FDA624054A1B00EE4F01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 				03B1FDA424054A1B00EE4F01 /* AppDelegate.swift */,
 				03B1FDA624054A1B00EE4F01 /* SceneDelegate.swift */,
 				03B1FDA824054A1B00EE4F01 /* ContentView.swift */,
+				033439282406E35800EFD9E3 /* HomeView.swift */,
+				033439222406DE1600EFD9E3 /* GroupsView.swift */,
+				033439242406DE2200EFD9E3 /* CalendarView.swift */,
+				033439262406DE2B00EFD9E3 /* SettingsView.swift */,
 				03B1FDAA24054A1F00EE4F01 /* Assets.xcassets */,
 				03B1FDAF24054A1F00EE4F01 /* LaunchScreen.storyboard */,
 				03B1FDB224054A1F00EE4F01 /* Info.plist */,
@@ -267,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033439252406DE2200EFD9E3 /* CalendarView.swift in Sources */,
+				033439292406E35800EFD9E3 /* HomeView.swift in Sources */,
 				03B1FDA524054A1B00EE4F01 /* AppDelegate.swift in Sources */,
 				03B1FDA724054A1B00EE4F01 /* SceneDelegate.swift in Sources */,
+				033439272406DE2B00EFD9E3 /* SettingsView.swift in Sources */,
+				033439232406DE1600EFD9E3 /* GroupsView.swift in Sources */,
 				03B1FDA924054A1B00EE4F01 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

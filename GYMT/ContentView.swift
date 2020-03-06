@@ -10,7 +10,50 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        // Tab View, displaying 4 different other seperate SwiftUI views - named after their respective pages.
+        TabView{
+            // Link to HomeView.swift file
+            HomeView()
+                // Initiates a new tab bar item.
+                .tabItem {
+                    // Uses a vertical stacking system for the tab item's layout.
+                    VStack {
+                        // Import relevant logo from the SFLogos library, built into XCode
+                        Image(systemName: "house.fill")
+                        // Simple tab label
+                        Text("Home")
+                    }
+                }
+            .tag(0)
+            // Link to GroupsView.swift file
+            GroupsView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person.3.fill")
+                        Text("Groups")
+                    }
+                }
+            .tag(1)
+            // Link to CalendarView.swift file
+            CalendarView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "calendar")
+                        Text("Calendar")
+                    }
+                }
+            .tag(2)
+            // Link to SettingsView.swift file
+            SettingsView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                }
+            .tag(3)
+        }
     }
 }
 
