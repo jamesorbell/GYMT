@@ -5,56 +5,48 @@
 //  Created by James Orbell on 26/02/2020.
 //  Copyright © 2020 James Orbell. All rights reserved.
 //
-
-// Colour palette used:
-// #E63946 - Desire
-// #F1FAEE - Honeydew
-// #A8DADC - Light Blue
-// #457B9D - Queen Blue
-// #1D3557 - Space Cadet
+// The nice blue: rgb(31,61,102)
+//
 
 import SwiftUI
 
 struct HomeView: View {
     
+    @State var show = false
+    
     var body: some View {
-        NavigationView {
-            // 3.
-            ScrollView(.vertical, showsIndicators: true) {
-                SessionView()
+        
+        NavigationView() {
+            
+            ScrollView() {
+                
+                SessionCard()
                 
                 Text("Ongoing Challenges")
-                    .font(.system(size: 25, weight: .heavy))
+                    .font(.headline)
                     .padding()
-
-                CardView()
+                
+                ScrollView(.horizontal){
                     
-                CardView()
-
+                    HStack(spacing: 10){
+                        
+                        ChallengeRow()
+                        ChallengeRow()
+                        ChallengeRow()
+                        
+                    }.padding(.leading, 10)
+                    
+                }.frame(height: 250)
+                
             }
-            // 4.
-            .navigationBarItems(leading:
-            HStack {
-                Image("example-avatar")
-                    .resizable()
-                    .frame(width: 35, height: 35)
-                    .clipShape(Circle())
-            }, trailing:
+            
+            .navigationBarItems(trailing:
             HStack {
                 Button(action: {}) {
-                    HStack {
-                        Text("1973")
-                            .foregroundColor(Color.white)
-                        Image("coin")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                    }
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(Color(red: 31/255, green: 61/255, blue: 102/255))
                 }
-                .padding(.bottom, 5)
-                .padding(.top, 5)
-                .padding(.horizontal, 15)
-                .background(Color(red: 69/255, green: 123/255, blue: 157/255))
-                .cornerRadius(100)
             })
                 // 5.
                 .navigationBarTitle(Text("Home"))
@@ -65,41 +57,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-    }
-}
-
-struct SessionView: View {
-    var body: some View {
-        VStack {
-            Text("Current Session")
-                .padding(.top, 25)
-                .font(.system(size: 25, weight: .bold))
-            HStack {
-                VStack {
-                    Image(systemName: "stopwatch.fill")
-                    Text("1:20").font(.system(size: 25, weight: .bold))
-                    Text("Time").font(.system(size: 15))
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "heart.fill")
-                    Text("143").font(.system(size: 25, weight: .bold))
-                    Text("HR").font(.system(size: 15))
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "flame.fill")
-                    Text("164").font(.system(size: 25, weight: .bold))
-                    Text("Cal").font(.system(size: 15))
-                }
-            }
-            .padding(.horizontal, 50)
-            .padding(.vertical, 30)
-        }
-        .foregroundColor(Color.white)
-        .background(Color(red: 29/255, green: 53/255, blue: 87/255))
-        .cornerRadius(20)
-        .padding()
     }
 }
 
@@ -133,125 +90,57 @@ struct CardView: View {
         .frame(height: 125)
         .foregroundColor(Color.white)
         .sheet(isPresented: $show) {
-            Detail()
+            ChallengeDetailView()
         }
     }
 }
 
-struct Detail : View {
+struct ChallengeDetailView : View {
     
     var body : some View{
         
         VStack{
-            Text("Hello there this is my card")
+            
+            Image("running-bg").resizable().aspectRatio(1.35, contentMode: .fill).frame(width:UIScreen.main.bounds.width,height: 450).offset(y: -200).padding(.bottom, -200)
             
             GeometryReader{geo in
                 
-                VStack(alignment: .leading){
+                VStack(alignment: .center){
                     
-                    detailTop()
-                    detailMiddle()
-                    detailBottom()
+                    Text("King of the Hill").fontWeight(.heavy).font(.largeTitle)
+                        .padding()
+                    
+                    Text("The 3 muskateers").fontWeight(.heavy).padding(.bottom, 25)
+                    
+                    VStack(alignment: .leading){
+                        Text("Leaderboard")
+                        .fontWeight(.heavy)
+                        .font(.subheadline)
+                        .padding()
+                        
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+                    .background(Color(red: 32/255, green: 32/255, blue: 32/255))
+                    .foregroundColor(Color.white)
+                    
+                    // Iterate through list to generate the leaderboard according to current points within the challenge. However, currently just points to an external view (need to include variables to parse through etc in the future)
+                    LeaderboardItemView()
+                    LeaderboardItemView()
+                    LeaderboardItemView()
+                    LeaderboardItemView()
+                    LeaderboardItemView()
+                    LeaderboardItemView()
+                    
+                    Spacer()
                     
                 }
                 
-            }
+            }.background(Color.white)
+            .foregroundColor(Color.black)
+            .clipShape(Rounded())
+            .padding(.top, -75)
+            
         }
-        
-    }
-    
-}
-
-struct detailTop : View {
-    
-    var body : some View{
-        
-        VStack(alignment: .leading, spacing: 10){
-            
-            HStack{
-                
-                VStack(alignment: .leading){
-                    
-                    Text("Forest").fontWeight(.heavy).font(.largeTitle)
-                    Text("Camping").fontWeight(.heavy).font(.largeTitle)
-                    
-                }
-                
-                Spacer()
-                
-                Text("$299").foregroundColor(Color("bg")).font(.largeTitle)
-            }
-            
-        }.padding()
-    }
-}
-
-
-struct detailMiddle : View {
-    
-    var body : some View{
-        
-        VStack(alignment: .leading, spacing: 15){
-            
-
-            HStack(spacing: 5){
-                
-                Text("Kecamatan Klojen").foregroundColor(Color("bg"))
-                
-            }
-            
-            Text("People").fontWeight(.heavy)
-            
-            Text("Number Of People In Your Group").foregroundColor(.gray)
-            
-            HStack(spacing: 6){
-                
-                ForEach(0..<5){i in
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Text("\(i + 1)").foregroundColor(.white).padding(20)
-                        
-                    }.background(Color("bg"))
-                    .cornerRadius(8)
-                }
-            }
-            
-            
-        }.padding(.horizontal,15)
-    }
-}
-
-struct detailBottom : View {
-    
-    var body : some View{
-        
-        VStack(alignment: .leading, spacing: 10){
-            
-            Text("Description").fontWeight(.heavy)
-            Text("Forest Camping Experiences and Meanings Key elements of camping experience include nature, social interaction, and comfort/convenience. The most common associated meanings are restoration, family functioning").foregroundColor(.gray)
-            
-            HStack(spacing: 8){
-                
-                Button(action: {
-                    
-                }) {
-                    
-                    HStack(spacing: 6){
-                        
-                        Text("Book Your Experience")
-                        
-                    }.foregroundColor(.white)
-                    .padding()
-                    
-                }.background(Color("bg"))
-                .cornerRadius(8)
-                
-            }.padding(.top, 6)
-            
-        }.padding()
     }
 }
 
@@ -259,7 +148,132 @@ struct Rounded : Shape {
     
     func path(in rect: CGRect) -> Path {
         
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 40, height: 40))
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 30, height: 30))
         return Path(path.cgPath)
+    }
+}
+
+struct LeaderboardItemView: View {
+    var body: some View {
+        HStack{
+            Text("1st")
+            Spacer()
+            Text("Anita Bieda")
+        }.padding()
+    }
+}
+
+struct ProfileDetailView: View {
+    var body : some View{
+        VStack{
+            GeometryReader{geo in
+                
+                VStack(alignment: .leading){
+                    
+                    HStack(alignment: .bottom){
+                        Text("James Orbell")
+                            .fontWeight(.heavy)
+                            .font(.largeTitle)
+                        Spacer()
+                        Image("example-avatar")
+                        .resizable()
+                            .frame(width: 75, height: 75)
+                        .clipShape(Circle())
+                    }
+                    .padding()
+                    .padding(.top, 30)
+                    
+                    HStack{
+                        VStack(alignment: .leading) {
+                            Text("43")
+                                .fontWeight(.heavy)
+                            Text("Friends")
+                        }.padding()
+                        
+                        VStack(alignment: .leading) {
+                            Text("12")
+                                .fontWeight(.heavy)
+                            Text("Groups")
+                        }.padding()
+                        
+                        Spacer()
+                        
+                        Text("1945 Coins")
+                            .fontWeight(.heavy)
+                        
+                        Image("coin")
+                        .resizable()
+                        .frame(width: 15, height: 15)
+                        .padding(.trailing, 25)
+                        
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+                    .background(Color(red: 32/255, green: 32/255, blue: 32/255))
+                    .foregroundColor(Color.white)
+                    .padding(.top, -25)
+                    
+                    HStack{
+                        Text("Recent Activity")
+                        .font(.headline)
+                        .fontWeight(.heavy)
+                        .padding()
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+                    
+                    // Iterate through list to generate the leaderboard according to current points within the challenge. However, currently just points to an external view (need to include variables to parse through etc in the future)
+                    
+                    RecentActivityItemView()
+                    RecentActivityItemView()
+                    RecentActivityItemView()
+                    
+                    HStack{
+                        Text("Groups")
+                        .font(.headline)
+                        .fontWeight(.heavy)
+                        .padding()
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+                    
+                    HStack{
+                        Text("Completed Challenges")
+                        .font(.headline)
+                        .fontWeight(.heavy)
+                        .padding()
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+                    
+                    Spacer()
+                    
+                }
+                
+            }.background(Color.white)
+            .foregroundColor(Color.black)
+            
+        }
+    }
+}
+
+struct RecentActivityItemView: View {
+    var body: some View {
+        HStack{
+            VStack {
+                Text("19")
+                Text("TH")
+            }
+            .font(.subheadline)
+            .padding()
+            
+            Text("1 Hour : 20 Minutes")
+                .font(.subheadline)
+                .fontWeight(.heavy)
+                .padding()
+            
+            Spacer()
+            
+            Text(">")
+                .padding()
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: Alignment.topLeading)
+        .border(Color.gray)
     }
 }
