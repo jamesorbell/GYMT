@@ -8,6 +8,14 @@
 
 import SwiftUI
 
+struct User: Identifiable {
+    var id = UUID()
+    var username: String
+    var displayname: String
+    // var avatar: String
+    var coins: Int
+}
+
 struct ContentView: View {
     var body: some View {
         
@@ -53,7 +61,7 @@ struct ContentView: View {
                     }
                 }
             .tag(3)
-        }
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 

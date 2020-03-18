@@ -37,7 +37,7 @@ struct SessionCard: View {
             .padding(.vertical, 30)
         }
         .foregroundColor(Color.white)
-        .background(Color(red: 31/255, green: 61/255, blue: 102/255))
+        .background(Color(UIColor.systemBlue))
         .cornerRadius(20)
         .padding()
     }

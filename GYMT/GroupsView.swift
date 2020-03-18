@@ -10,7 +10,11 @@ import SwiftUI
 
 struct GroupsView: View {
     var body: some View {
-        Text("Welcome to the Groups screen.")
+        NavigationView {
+            Text("Welcome to the Groups screen")
+            
+            .navigationBarTitle("Groups", displayMode: .inline)
+        }
     }
 }
 

@@ -10,7 +10,11 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text("Welcome to the Calendar screen.")
+        NavigationView {
+            Text("Welcome to the Calendar screen")
+            
+            .navigationBarTitle("Calendar", displayMode: .inline)
+        }
     }
 }
 

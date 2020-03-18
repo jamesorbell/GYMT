@@ -10,7 +10,25 @@ import SwiftUI
 
 struct ActivityRow: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink {
+            HStack{
+                VStack{
+                    Text("19")
+                        .font(.subheadline)
+                    Text("FRI")
+                        .font(.subheadline)
+                }
+                .padding()
+                
+                Text("1 Hour : 20 Minutes")
+                    .fontWeight(.heavy)
+                
+                Spacer()
+            
+                Text(">")
+                    .padding()
+            }
+        }
     }
 }
 

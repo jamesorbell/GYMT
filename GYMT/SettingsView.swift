@@ -10,7 +10,18 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text("Welcome to the Settings screen.")
+        NavigationView {
+            List {
+                Text("Setting 1")
+                Text("Setting 2")
+                Text("Setting 3")
+                Text("Setting 4")
+                Text("Setting 5")
+                Text("Setting 6")
+            }
+            
+            .navigationBarTitle("Settings", displayMode: .inline)
+        }
     }
 }
 
