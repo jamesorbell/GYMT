@@ -70,8 +70,7 @@ struct GroupRow: View {
             .background(Color(UIColor.systemPink))
             .foregroundColor(Color.white)
             .cornerRadius(20)
-            .padding(.top, -10)
-            .padding(.bottom, -10)
+            .padding(.bottom, -20)
             .padding()
         }
     }

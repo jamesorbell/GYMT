@@ -9,11 +9,35 @@
 import SwiftUI
 
 struct GroupsView: View {
+    
+    @State var selection: Int? = nil
+    
     var body: some View {
         NavigationView {
-            Text("Welcome to the Groups screen")
-            
-            .navigationBarTitle("Groups", displayMode: .inline)
+            VStack{
+                GroupRow()
+                GroupRow()
+                GroupRow()
+                
+                NavigationLink(destination: CreateNewGroupDetailView(), tag: 1, selection: $selection) {
+                    Button(action: {
+                        self.selection = 1
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text("Create new group").foregroundColor(Color.white).bold()
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                    .background(Color(UIColor.systemBlue))
+                    .cornerRadius(20)
+                    .padding()
+                }
+                
+                Spacer()
+            }
+            .navigationBarTitle("Your Groups", displayMode: .inline)
         }
     }
 }

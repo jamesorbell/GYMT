@@ -17,6 +17,9 @@ struct User: Identifiable {
 }
 
 struct ContentView: View {
+    
+    @ObservedObject var viewRouter: ViewRouter
+    
     var body: some View {
         
         // Tab View, displaying 4 different other seperate SwiftUI views - named after their respective pages.
@@ -34,6 +37,17 @@ struct ContentView: View {
                     }
                 }
             .tag(0)
+            
+            // Link to ActivityScreenView.swift file
+            ActivityScreenView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "flame.fill")
+                        Text("Activity")
+                    }
+                }
+            .tag(1)
+            
             // Link to GroupsView.swift file
             GroupsView()
                 .tabItem {
@@ -42,16 +56,8 @@ struct ContentView: View {
                         Text("Groups")
                     }
                 }
-            .tag(1)
-            // Link to CalendarView.swift file
-            CalendarView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "calendar")
-                        Text("Calendar")
-                    }
-                }
             .tag(2)
+            
             // Link to SettingsView.swift file
             SettingsView()
                 .tabItem {
@@ -61,12 +67,17 @@ struct ContentView: View {
                     }
                 }
             .tag(3)
-        }.edgesIgnoringSafeArea(.top)
+            
+        }
+        .navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewRouter: ViewRouter())
     }
 }

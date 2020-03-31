@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		033439232406DE1600EFD9E3 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439222406DE1600EFD9E3 /* GroupsView.swift */; };
-		033439252406DE2200EFD9E3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439242406DE2200EFD9E3 /* CalendarView.swift */; };
+		033439252406DE2200EFD9E3 /* ActivityScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439242406DE2200EFD9E3 /* ActivityScreenView.swift */; };
 		033439272406DE2B00EFD9E3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439262406DE2B00EFD9E3 /* SettingsView.swift */; };
 		033439292406E35800EFD9E3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033439282406E35800EFD9E3 /* HomeView.swift */; };
 		03B1FDA524054A1B00EE4F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDA424054A1B00EE4F01 /* AppDelegate.swift */; };
@@ -19,14 +19,23 @@
 		03B1FDB124054A1F00EE4F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B1FDAF24054A1F00EE4F01 /* LaunchScreen.storyboard */; };
 		03B1FDBC24054A1F00EE4F01 /* GYMTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDBB24054A1F00EE4F01 /* GYMTTests.swift */; };
 		03B1FDC724054A1F00EE4F01 /* GYMTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B1FDC624054A1F00EE4F01 /* GYMTUITests.swift */; };
+		03C04CFD243387DE002B0CB3 /* SettingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04CFC243387DE002B0CB3 /* SettingDetailView.swift */; };
+		03C04CFF24338DA5002B0CB3 /* CreateNewGroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04CFE24338DA5002B0CB3 /* CreateNewGroupDetailView.swift */; };
+		03C04D03243394C3002B0CB3 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D02243394C3002B0CB3 /* ActivityDetailView.swift */; };
+		03C04D0524339AAD002B0CB3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D0424339AAD002B0CB3 /* LoginView.swift */; };
+		03C04D0724339ACA002B0CB3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D0624339ACA002B0CB3 /* WelcomeView.swift */; };
+		03C04D092433A97D002B0CB3 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D082433A97D002B0CB3 /* TermsAndConditionsView.swift */; };
+		03C04D0B2433A9AB002B0CB3 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D0A2433A9AB002B0CB3 /* SignupView.swift */; };
+		03C04D0F2433B13B002B0CB3 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D0E2433B13B002B0CB3 /* MotherView.swift */; };
+		03C04D112433B214002B0CB3 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C04D102433B214002B0CB3 /* ViewRouter.swift */; };
 		03E03163241D67590072F3DC /* GroupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E03162241D67590072F3DC /* GroupRow.swift */; };
 		03E03165241D67610072F3DC /* ChallengeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E03164241D67610072F3DC /* ChallengeRow.swift */; };
 		03E03167241D69330072F3DC /* SessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E03166241D69330072F3DC /* SessionCard.swift */; };
 		03E125E7242264C300756A88 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125E6242264C300756A88 /* ProfileDetailView.swift */; };
-		03E125E924226D6E00756A88 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125E824226D6E00756A88 /* ActivityView.swift */; };
 		03E125EB2422994E00756A88 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125EA2422994E00756A88 /* GroupDetailView.swift */; };
 		03E125ED24229D5100756A88 /* ChallengeLeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125EC24229D5100756A88 /* ChallengeLeaderboardRow.swift */; };
 		03E125F12422AD2E00756A88 /* CompletedChallengeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125F02422AD2E00756A88 /* CompletedChallengeRow.swift */; };
+		03E125F3242521E500756A88 /* CreateNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E125F2242521E500756A88 /* CreateNewGroupView.swift */; };
 		03E76063241FBF1A00FCF423 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E76062241FBF1A00FCF423 /* ChallengeDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +56,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		032BEC162426C1BC0021CDC8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		033439222406DE1600EFD9E3 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
-		033439242406DE2200EFD9E3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		033439242406DE2200EFD9E3 /* ActivityScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreenView.swift; sourceTree = "<group>"; };
 		033439262406DE2B00EFD9E3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		033439282406E35800EFD9E3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		03B1FDA124054A1B00EE4F01 /* GYMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,14 +88,23 @@
 		03B1FDC224054A1F00EE4F01 /* GYMTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GYMTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B1FDC624054A1F00EE4F01 /* GYMTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMTUITests.swift; sourceTree = "<group>"; };
 		03B1FDC824054A1F00EE4F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C04CFC243387DE002B0CB3 /* SettingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailView.swift; sourceTree = "<group>"; };
+		03C04CFE24338DA5002B0CB3 /* CreateNewGroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewGroupDetailView.swift; sourceTree = "<group>"; };
+		03C04D02243394C3002B0CB3 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		03C04D0424339AAD002B0CB3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		03C04D0624339ACA002B0CB3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		03C04D082433A97D002B0CB3 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		03C04D0A2433A9AB002B0CB3 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		03C04D0E2433B13B002B0CB3 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		03C04D102433B214002B0CB3 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		03E03162241D67590072F3DC /* GroupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRow.swift; sourceTree = "<group>"; };
 		03E03164241D67610072F3DC /* ChallengeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRow.swift; sourceTree = "<group>"; };
 		03E03166241D69330072F3DC /* SessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCard.swift; sourceTree = "<group>"; };
 		03E125E6242264C300756A88 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
-		03E125E824226D6E00756A88 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		03E125EA2422994E00756A88 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		03E125EC24229D5100756A88 /* ChallengeLeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeLeaderboardRow.swift; sourceTree = "<group>"; };
 		03E125F02422AD2E00756A88 /* CompletedChallengeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallengeRow.swift; sourceTree = "<group>"; };
+		03E125F2242521E500756A88 /* CreateNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewGroupView.swift; sourceTree = "<group>"; };
 		03E76062241FBF1A00FCF423 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +133,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037D4B342426BF46002D46DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		03B1FD9824054A1B00EE4F01 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +147,7 @@
 				03B1FDBA24054A1F00EE4F01 /* GYMTTests */,
 				03B1FDC524054A1F00EE4F01 /* GYMTUITests */,
 				03B1FDA224054A1B00EE4F01 /* Products */,
+				037D4B342426BF46002D46DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,10 +164,19 @@
 		03B1FDA324054A1B00EE4F01 /* GYMT */ = {
 			isa = PBXGroup;
 			children = (
+				03C04D0E2433B13B002B0CB3 /* MotherView.swift */,
+				03C04D102433B214002B0CB3 /* ViewRouter.swift */,
 				03B1FDA424054A1B00EE4F01 /* AppDelegate.swift */,
+				03C04D02243394C3002B0CB3 /* ActivityDetailView.swift */,
 				03B1FDA624054A1B00EE4F01 /* SceneDelegate.swift */,
+				03C04D0424339AAD002B0CB3 /* LoginView.swift */,
+				03C04D0A2433A9AB002B0CB3 /* SignupView.swift */,
+				03C04D082433A97D002B0CB3 /* TermsAndConditionsView.swift */,
+				03C04D0624339ACA002B0CB3 /* WelcomeView.swift */,
 				03B1FDA824054A1B00EE4F01 /* ContentView.swift */,
+				03E125F2242521E500756A88 /* CreateNewGroupView.swift */,
 				03E03166241D69330072F3DC /* SessionCard.swift */,
+				03C04CFC243387DE002B0CB3 /* SettingDetailView.swift */,
 				03E03162241D67590072F3DC /* GroupRow.swift */,
 				03E125EA2422994E00756A88 /* GroupDetailView.swift */,
 				03E125F02422AD2E00756A88 /* CompletedChallengeRow.swift */,
@@ -137,9 +185,9 @@
 				03E125E6242264C300756A88 /* ProfileDetailView.swift */,
 				03E76062241FBF1A00FCF423 /* ChallengeDetailView.swift */,
 				03E125EC24229D5100756A88 /* ChallengeLeaderboardRow.swift */,
-				03E125E824226D6E00756A88 /* ActivityView.swift */,
 				033439222406DE1600EFD9E3 /* GroupsView.swift */,
-				033439242406DE2200EFD9E3 /* CalendarView.swift */,
+				03C04CFE24338DA5002B0CB3 /* CreateNewGroupDetailView.swift */,
+				033439242406DE2200EFD9E3 /* ActivityScreenView.swift */,
 				033439262406DE2B00EFD9E3 /* SettingsView.swift */,
 				03B1FDAA24054A1F00EE4F01 /* Assets.xcassets */,
 				03B1FDAF24054A1F00EE4F01 /* LaunchScreen.storyboard */,
@@ -185,12 +233,16 @@
 				03B1FD9D24054A1B00EE4F01 /* Sources */,
 				03B1FD9E24054A1B00EE4F01 /* Frameworks */,
 				03B1FD9F24054A1B00EE4F01 /* Resources */,
+				037D4B392426BFA2002D46DA /* ShellScript */,
+				032BEC162426C1BC0021CDC8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GYMT;
+			packageProductDependencies = (
+			);
 			productName = GYMT;
 			productReference = 03B1FDA124054A1B00EE4F01 /* GYMT.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +315,8 @@
 				Base,
 			);
 			mainGroup = 03B1FD9824054A1B00EE4F01;
+			packageReferences = (
+			);
 			productRefGroup = 03B1FDA224054A1B00EE4F01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,14 +355,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		037D4B392426BFA2002D46DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CalendarHeatmap.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CalendarHeatmap.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03B1FD9D24054A1B00EE4F01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033439252406DE2200EFD9E3 /* CalendarView.swift in Sources */,
+				03C04D112433B214002B0CB3 /* ViewRouter.swift in Sources */,
+				033439252406DE2200EFD9E3 /* ActivityScreenView.swift in Sources */,
 				03E03165241D67610072F3DC /* ChallengeRow.swift in Sources */,
-				03E125E924226D6E00756A88 /* ActivityView.swift in Sources */,
+				03C04D092433A97D002B0CB3 /* TermsAndConditionsView.swift in Sources */,
 				03E125EB2422994E00756A88 /* GroupDetailView.swift in Sources */,
 				033439292406E35800EFD9E3 /* HomeView.swift in Sources */,
 				03B1FDA524054A1B00EE4F01 /* AppDelegate.swift in Sources */,
@@ -316,12 +393,20 @@
 				03E125E7242264C300756A88 /* ProfileDetailView.swift in Sources */,
 				033439272406DE2B00EFD9E3 /* SettingsView.swift in Sources */,
 				033439232406DE1600EFD9E3 /* GroupsView.swift in Sources */,
+				03E125F3242521E500756A88 /* CreateNewGroupView.swift in Sources */,
 				03B1FDA924054A1B00EE4F01 /* ContentView.swift in Sources */,
 				03E125ED24229D5100756A88 /* ChallengeLeaderboardRow.swift in Sources */,
+				03C04D0F2433B13B002B0CB3 /* MotherView.swift in Sources */,
 				03E76063241FBF1A00FCF423 /* ChallengeDetailView.swift in Sources */,
+				03C04D0724339ACA002B0CB3 /* WelcomeView.swift in Sources */,
 				03E03167241D69330072F3DC /* SessionCard.swift in Sources */,
+				03C04CFF24338DA5002B0CB3 /* CreateNewGroupDetailView.swift in Sources */,
+				03C04D03243394C3002B0CB3 /* ActivityDetailView.swift in Sources */,
 				03E125F12422AD2E00756A88 /* CompletedChallengeRow.swift in Sources */,
+				03C04CFD243387DE002B0CB3 /* SettingDetailView.swift in Sources */,
+				03C04D0524339AAD002B0CB3 /* LoginView.swift in Sources */,
 				03E03163241D67590072F3DC /* GroupRow.swift in Sources */,
+				03C04D0B2433A9AB002B0CB3 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +575,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GYMT/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S27RS3GH5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GYMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JO.GYMT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -510,6 +599,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GYMT/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S27RS3GH5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GYMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,7 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JO.GYMT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

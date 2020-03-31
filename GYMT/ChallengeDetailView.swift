@@ -27,6 +27,7 @@ struct ChallengeDetailView: View {
                     .background(Color.black)
                     .opacity(0.5)
                     .overlay(ChallengeTitleOverlay(), alignment: .bottomLeading)
+                    .overlay(ChallengeStatusOverlay(), alignment: .bottomTrailing)
                 
                 HStack{
                     Text("Description")
@@ -93,6 +94,17 @@ struct ChallengeTitleOverlay: View {
                 .font(.headline)
             Text("Group Name")
                 .font(.caption)
+        }
+        .padding()
+        .foregroundColor(Color.white)
+    }
+}
+
+struct ChallengeStatusOverlay: View {
+    var body: some View {
+        VStack(alignment: .trailing){
+            Text("Ongoing")
+                .font(.headline)
         }
         .padding()
         .foregroundColor(Color.white)
